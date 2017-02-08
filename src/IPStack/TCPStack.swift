@@ -53,7 +53,7 @@ open class TCPStack: TSIPStackDelegate, IPStackProtocol {
             }
         }
         if IPPacket.peekProtocol(packet) == .tcp {
-            TSIPStack.stack.receivedPacket(packet)
+            TSIPStack.stack.received(packet: packet)
             return true
         }
         return false
